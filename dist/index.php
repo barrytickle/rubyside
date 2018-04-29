@@ -75,35 +75,28 @@
         <h2>Meet the Rubyside team</h2>
         <p>Meet the team behind Rubyside, being the lead team at Cleversteam, you will be working close with professionals who use this software on a daily basis. </p>
         <div class="team-block">
-          <!-- Team member daniel details -->
-          <div class="team-member">
-            <div class="team-image">
-              <img src="/images/team/daniel.jpg" alt="Daniel Nicolson Headshot" title="Daniel Nicolson Headshot">
-            </div>
-            <div class="team-description">
-              <h3>Daniel Nicolson</h3>
-              <p>Director at <a href="http://cleversteam.com" target="_blank">Cleversteam</a></p>
-            </div>
-          </div>
-          <!-- Team member Mike details -->
-          <div class="team-member">
-            <div class="team-image">
-              <img src="/images/team/mike.jpg" alt="Mike Hart Headshot" title="Mike Hart Headshot">
-            </div>
-            <div class="team-description">
-              <h3>Mike Hart</h3>
-              <p>Technical Director at <a href="http://cleversteam.com" target="_blank">Cleversteam</a></p>
-            </div>
-          </div>
-          <!-- Team member Tom details -->
-          <div class="team-member">
-            <div class="team-image">
-              <img src="/images/team/tom.jpg" alt="Tom Dracz Headshot" title="Tom Dracz Headshot">
-            </div>
-            <div class="team-description">
-              <h3>Tom Dracz</h3>
-              <p>Developer at <a href="http://cleversteam.com" target="_blank">Cleversteam</a></p>
-            </div>
+          <div class="tiles">
+              <a href="http://cleversteam.com" class="tile">
+                <img src="/images/team/daniel.jpg" alt="Daniel Nicolson Headshot" title="Daniel Nicolson Headshot">
+                  <div class="details">
+                      <span class="title">Daniel Nicolson</span>
+                      <span class="info">Daniel uses his entrepreneurial spirit to lead Cleversteam into the future and director at Cleversteam</span>
+                  </div>
+              </a>
+              <a href="http://cleversteam.com" class="tile">
+                <img src="/images/team/mike.jpg" alt="Mike Hart Headshot" title="Mike Hart Headshot">
+                  <div class="details">
+                      <span class="title">Mike Hart</span>
+                      <span class="info">Overseeing our tech infrastructure and Ruby on Rails projects and a technical director at cleversteam</span>
+                  </div>
+              </a>
+              <a href="http://cleversteam.com" class="tile">
+                <img src="/images/team/tom.jpg" alt="Tom Dracz Headshot" title="Tom Dracz Headshot">
+                  <div class="details">
+                      <span class="title">Tom Dracz</span>
+                      <span class="info">Tom is a staunch Rubyist from Poland with a penchant for band t-shirts and a developer at Cleversteam</span>
+                  </div>
+              </a>
           </div>
         </div><!-- end of team block -->
       </div> <!-- End of site-container -->
@@ -112,9 +105,9 @@
       <div class="site-container">
         <div class="flex--center flex--split_column details--group">
           <h2>Rubyside is hosted by</h2>
-          <img src="/images/cleversteam.svg" alt="Cleversteam company logo" title="Cleversteam company logo">
+          <a href="http://cleversteam.com"><img src="/images/cleversteam.svg" alt="Cleversteam company logo" title="Cleversteam company logo"></a>
           <div class="location--group flex--center">
-            <p>Suite 4, 1 Church House, Hanover Street, Liverpool, L1 3DN</p>
+            <p><a href="https://www.google.co.uk/maps/search/Suite+4,+1+Church+House,+Hanover+Street,+Liverpool,+L1+3DN/@53.4027805,-2.986788,18z/data=!3m1!4b1" target="_blank">Suite 4, 1 Church House, Hanover Street, Liverpool, L1 3DN</a></p>
             <img src="/images/icons/location-marker.svg">
           </div>
         </div>

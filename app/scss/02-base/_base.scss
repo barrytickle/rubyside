@@ -9,23 +9,15 @@ body,html{
   margin: 0;
 }
 
+/* Default site container */
 .site-container{
   max-width:1260px;
   width:100%;
   margin:0 auto;
 }
-
+/* Sets all images to have a max-width of 100% to prevent overflow */
 img{
   max-width:100%;
-}
-
-
-.absolute--middle_top{
-  position: absolute;
-  left:50%;
-  transform:translateX(-50%);
-  top:30px;
-  z-index:3;
 }
 
 .no-move{

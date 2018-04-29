@@ -1,3 +1,4 @@
+/* styling for a default section tag within the site */
 section{
   position: relative;
   h2{
@@ -6,6 +7,7 @@ section{
   }
 }
 
+/* Styling for a section which will require the full-height of the user's screen, e.g. the welcome section */
 .section--full_height{
   height:100vh;
   padding:20px;
@@ -14,6 +16,7 @@ section{
   }
 }
 
+/* Defines the split block layout for the first view */
 .section--block_half{
   width:100vw;
   padding-top:30px;
@@ -21,17 +24,18 @@ section{
     width:50vw;
   }
 }
-
+/* Sets the background block of a section to the primary colour */
 .section--block_primary{
   background-color:$primaryColor;
   color:$white;
 }
-
+/* Sets the backgrouund colour of a block to secondary colour */
 .section--block_seconday{
   background-color:$secondaryColor;
   color:$white;
 }
 
+/* Defines styling for the logo section located on the left hand side oft he container */
 .ruby-logo--container{
   height:80px;
   box-shadow: $shadow;
@@ -62,7 +66,6 @@ section{
     }
 
   }
-
 
   .mouse-scroll{
     display:none;

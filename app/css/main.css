@@ -16,22 +16,16 @@ body, html {
   margin: 0;
 }
 
+/* Default site container */
 .site-container {
   max-width: 1260px;
   width: 100%;
   margin: 0 auto;
 }
 
+/* Sets all images to have a max-width of 100% to prevent overflow */
 img {
   max-width: 100%;
-}
-
-.absolute--middle_top {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 30px;
-  z-index: 3;
 }
 
 .no-move {
@@ -63,16 +57,18 @@ img {
 /* --- Media Querys --- */
 /* --- Media Querys --- */
 /* Defines all the flex variables used throughout the site, such as font families, base clours */
+/* Styling for the navigation bar located at the top of the page */
 header {
   top: 80px;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #2C3E50;
+  background: #354b60;
   position: fixed;
   z-index: 10;
   padding: 0 30px;
   display: none;
+  /* Defines styling for the logo placed within the navigation bar */
 }
 header.active {
   display: -webkit-box;
@@ -144,6 +140,7 @@ header img {
   }
 }
 
+/* Defines styling for the navigation bar located on the right hand side on desktop, will go into a column layout on mobile */
 .main-navigation {
   position: static;
   transition: 0.2s ease-in-out;
@@ -220,6 +217,7 @@ header img {
   }
 }
 
+/* Styling for the hamburger menu, will style each line individually */
 #hamburger {
   width: 36px;
   height: 18px;
@@ -277,6 +275,9 @@ header img {
 }
 
 /* Defines the styling for the navigation menu */
+/*
+  these classes are designed to be re-usable for future development, the classes will handle both desktop and mobile
+*/
 /* Flex center is designed to put an element straight in the middle of the section, use on the parent element for the correct effect */
 .flex--center {
   display: -webkit-box;
@@ -306,6 +307,7 @@ header img {
   -ms-flex-align: center;
 }
 
+/* This element is designed for the first half of the site, to provide a split column layout which can work on both desktop and mobile */
 .flex--split_column {
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
@@ -382,6 +384,7 @@ header img {
 }
 
 /* Defines all flex stying which will be used throughout the site */
+/* styling for a default section tag within the site */
 section {
   position: relative;
 }
@@ -390,6 +393,7 @@ section h2 {
   font-size: 42px;
 }
 
+/* Styling for a section which will require the full-height of the user's screen, e.g. the welcome section */
 .section--full_height {
   height: 100vh;
   padding: 20px;
@@ -400,6 +404,7 @@ section h2 {
   }
 }
 
+/* Defines the split block layout for the first view */
 .section--block_half {
   width: 100vw;
   padding-top: 30px;
@@ -410,16 +415,19 @@ section h2 {
   }
 }
 
+/* Sets the background block of a section to the primary colour */
 .section--block_primary {
   background-color: #FF2D55;
   color: #fff;
 }
 
+/* Sets the backgrouund colour of a block to secondary colour */
 .section--block_seconday {
   background-color: #2C3E50;
   color: #fff;
 }
 
+/* Defines styling for the logo section located on the left hand side oft he container */
 .ruby-logo--container {
   height: 80px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
@@ -546,6 +554,9 @@ section h2 {
 }
 
 /* Defines all section stying which will be used throughout the site */
+/*
+ this section is the default stlying for all buttons on the site, will contain styling for buttons with borders and buttons with full colour backgrounds
+ */
 .btn {
   padding: 10px 20px;
   border-radius: 5px;
@@ -571,6 +582,7 @@ section h2 {
 }
 
 /* Defines all section stying which will be used throughout the site */
+/* logo group is a container for the logo and the phrase below, the phrase is designed to be within a span tag. This is designed for SEO to detect */
 .logo--group img {
   height: 250px;
 }
@@ -579,10 +591,7 @@ section h2 {
   height: 50px;
 }
 
-.rubyside-motto {
-  font-size: 20px;
-}
-
+/* UVP block is designed for the right-hand side of the welcome view, showing what rubyside is with a call to action */
 .uvp--block {
   width: 80%;
   font-size: 14px;
@@ -656,6 +665,36 @@ section h2 {
   }
 }
 
+.map--banner {
+  padding: 0;
+  position: relative;
+}
+.map--banner #map {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+.map--banner:after {
+  content: '';
+  display: block;
+  background-color: #2C3E50;
+  width: 80%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 3px 20px #2C3E50;
+}
+.map--banner .site-container {
+  z-index: 2;
+  position: relative;
+  padding: 40px;
+}
+
 .event-block h3 {
   font-size: 45px;
   font-weight: 100;
@@ -668,6 +707,10 @@ section h2 {
 }
 .event-block .event-stats {
   margin-left: 20px;
+}
+.event-block img {
+  width: 150px;
+  height: 150px;
 }
 
 .event-block {
@@ -740,12 +783,20 @@ section h2 {
   height: 150px;
 }
 
+#map {
+  height: 550px;
+}
+
+.location--group a {
+  text-decoration: none;
+}
 .location--group img {
   width: 15px;
   height: 15px;
 }
 
 /*All the code in here will be designed for the dark strip underneath the header */
+/* This will be the styling for the ruby logo section, where the logo can appear as a background image for the content. */
 .background-block {
   padding: 30px 0;
   background-image: url("/images/icons/ruby-dark.svg");
@@ -841,6 +892,10 @@ section h2 {
   -moz-flex-direction: column;
   flex-direction: column;
   -ms-flex-direction: column;
+  /* Defines loop of tiles */
+  /* End of tiles wrapper */
+  /*
+  This section defines the animation for each tile, it works by adding an opacity on hover, adjusting the position of each element to generate the bump effect on hover of each team member. */
 }
 @media (min-width: 1024px) {
   .team-block {
@@ -856,58 +911,116 @@ section h2 {
     -ms-flex-direction: row;
   }
 }
-.team-block .team-member {
+.team-block .tiles {
+  /*Each tile will be each indivudual staff member. */
+  /* End of tile */
+}
+.team-block .tiles .tile {
+  display: inline-block;
+  margin: 10px;
+  text-align: left;
+  opacity: .99;
+  overflow: hidden;
+  position: relative;
+  border-radius: 3px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
   width: 100%;
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -moz-box-orient: vertical;
-  box-orient: vertical;
-  -webkit-box-direction: normal;
-  -moz-box-direction: normal;
-  box-direction: normal;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-direction: column;
-  margin-bottom: 30px;
+  transition: 0.2s ease-in-out;
+  /* Each before element will be the darker gradient which will show up upon hover */
+  /* Image defines the team member shown within the tile */
+  /* Details will contain the styling for both the title and the description of the user */
+  /* End of details */
+}
+@media (min-width: 768px) {
+  .team-block .tiles .tile {
+    width: 45%;
+  }
 }
 @media (min-width: 1024px) {
-  .team-block .team-member {
+  .team-block .tiles .tile {
     width: 30%;
   }
 }
-.team-block .team-description {
-  background: #fff;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+.team-block .tiles .tile:hover {
+  box-shadow: 0px 3px 60px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+.team-block .tiles .tile:before {
+  content: '';
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+  width: 100%;
+  height: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  -webkit-transition-property: top, opacity;
+  transition-property: top, opacity;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.team-block .tiles .tile img {
+  display: block;
+  max-width: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.team-block .tiles .tile .details {
+  font-size: 16px;
   padding: 20px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
 }
-.team-block .team-description h3 {
-  font-weight: 400;
+.team-block .tiles .tile .details span {
+  display: block;
+  opacity: 0;
+  position: relative;
+  top: 100px;
+  -webkit-transition-property: top, opacity;
+  transition-property: top, opacity;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
 }
-.team-block .team-description h3, .team-block .team-description a {
-  color: #FF2D55;
-  text-decoration: none;
-  margin: 0;
+.team-block .tiles .tile .details span.title {
+  line-height: 1;
+  font-weight: 100;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  font-size: 22px;
 }
-.team-block .team-description p {
-  color: #555;
-  margin: 0;
+.team-block .tiles .tile .details span.info {
+  line-height: 1.2;
+  margin-top: 5px;
+  font-size: 16px;
+}
+.team-block .tiles .tile:focus:before,
+.team-block .tiles .tile:focus span, .team-block .tiles .tile:hover:before,
+.team-block .tiles .tile:hover span {
+  opacity: 1;
+}
+.team-block .tiles .tile:before, .team-block .tiles .tile:hover:before {
+  top: 50%;
+}
+.team-block .tiles .tile:focus:before, .team-block .tiles .tile:hover:before {
+  top: 50%;
+}
+.team-block .tiles .tile:focus span, .team-block .tiles .tile:hover span {
+  top: 0;
+}
+.team-block .tiles .tile:focus .title, .team-block .tiles .tile:hover .title {
+  -webkit-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+.team-block .tiles .tile:focus .info, .team-block .tiles .tile:hover .info {
+  -webkit-transition-delay: 0.25s;
+  transition-delay: 0.25s;
 }
 
+/* End of team block */
 /*Will contain the styling for the our team section, which will define the different card stylings. */
-.ruby--code {
-  padding: 10px;
-  padding-right: 30px;
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
-  background: #fff;
-  width: auto;
-  display: table;
-}
-
-/* Will contain all the styling for any code blocks present on the page (Such as the ruby code block within the "What is ruby?" section. */

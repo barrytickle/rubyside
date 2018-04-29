@@ -1,9 +1,10 @@
+/* Styling for the navigation bar located at the top of the page */
 header{
   top:80px;
   left:0;
   width:100%;
   height:100vh;
-  background:$secondaryColor;
+  background:lighten($secondaryColor, 5%);
   position: fixed;
   z-index: 10;
   padding:0 30px;
@@ -21,7 +22,7 @@ header{
     height:auto;
   }
 
-
+/* Defines styling for the logo placed within the navigation bar */
   img{
     height:30px;
     width:30px;
@@ -32,13 +33,9 @@ header{
   }
 
 }
-
+/* Defines styling for the navigation bar located on the right hand side on desktop, will go into a column layout on mobile */
 .main-navigation{
   position: static;
-  // height: calc(100vh - 80px);
-  // width: 100%;
-  // top: 80px;
-  // left: -100%;
   transition: 0.2s ease-in-out;
     @include display(flex);
     @include flex-direction(column);
@@ -71,6 +68,7 @@ header{
   }
 }
 
+/* Styling for the hamburger menu, will style each line individually */
 #hamburger{
   width: 36px;
   height: 18px;

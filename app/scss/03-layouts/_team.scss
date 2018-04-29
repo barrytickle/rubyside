@@ -7,34 +7,124 @@
     @include flex-direction(row);
   }
 
-  .team-member{
-    width:100%;
-    @include display(flex);
-    @include flex-direction(column);
-    margin-bottom:30px;
-    @media #{$laptop}{
-      width:30%;
-    }
+  /* Defines loop of tiles */
+  .tiles{
+    /*Each tile will be each indivudual staff member. */
+    .tile{
+      display: inline-block;
+      margin: 10px;
+      text-align: left;
+      opacity: .99;
+      overflow: hidden;
+      position: relative;
+      border-radius: 3px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.05);
+      width:100%;
+      transition: 0.2s ease-in-out;
+      @media #{$tablet}{
+        width:45%;
+      }
+      @media #{$laptop}{
+        width:30%;
+      }
+      &:hover{
+          box-shadow: 0px 3px 60px rgba(0,0,0,0.5);
+          transform: scale(1.1);
+      }
+      /* Each before element will be the darker gradient which will show up upon hover */
+      &:before{
+        content: '';
+        background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+        background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+        width: 100%;
+        height: 50%;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 2;
+        -webkit-transition-property: top, opacity;
+                transition-property: top, opacity;
+        -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+      }
+      /* Image defines the team member shown within the tile */
+      img{
+        display: block;
+        max-width: 100%;
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
 
-  }
+        /* Details will contain the styling for both the title and the description of the user */
+      .details{
+        font-size: 16px;
+        padding: 20px;
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 3;
 
-  .team-description{
-    background:$white;
-    box-shadow: $shadow;
-    padding:20px;
-    h3{
-      font-weight:400;
-    }
-    h3,a{
-      color:$primaryColor;
-      text-decoration: none;
-      margin:0;
-    }
-    p{
-      color:$black;
-      margin:0;
-    }
-  }
+        span{
+          display: block;
+          opacity: 0;
+          position: relative;
+          top: 100px;
+          -webkit-transition-property: top, opacity;
+                  transition-property: top, opacity;
+          -webkit-transition-duration: 0.3s;
+                  transition-duration: 0.3s;
+          -webkit-transition-delay: 0s;
+                  transition-delay: 0s;
+
+            &.title{
+              line-height: 1;
+              font-weight: 100;
+              text-shadow: $shadow;
+              font-size: 22px;
+            }
+
+            &.info{
+              line-height: 1.2;
+              margin-top: 5px;
+              font-size: 16px;
+            }
+        }
 
 
+      } /* End of details */
+
+    } /* End of tile */
+
+} /* End of tiles wrapper */
+
+
+/*
+This section defines the animation for each tile, it works by adding an opacity on hover, adjusting the position of each element to generate the bump effect on hover of each team member. */
+.tiles .tile:focus:before,
+.tiles .tile:focus span, .tiles .tile:hover:before,
+.tiles .tile:hover span {
+opacity: 1;
 }
+
+.tiles .tile:before, .tiles .tile:hover:before {
+  top: 50%;
+}
+
+    .tiles .tile:focus:before, .tiles .tile:hover:before {
+      top: 50%;
+    }
+    .tiles .tile:focus span, .tiles .tile:hover span {
+      top: 0;
+    }
+    .tiles .tile:focus .title, .tiles .tile:hover .title {
+      -webkit-transition-delay: 0.15s;
+              transition-delay: 0.15s;
+    }
+    .tiles .tile:focus .info, .tiles .tile:hover .info {
+      -webkit-transition-delay: 0.25s;
+              transition-delay: 0.25s;
+    }
+
+} /* End of team block */
