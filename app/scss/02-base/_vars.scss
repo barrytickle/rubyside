@@ -1,0 +1,38 @@
+/* --- Colours --- */
+
+$primaryColor: #FF2D55;
+$secondaryColor: #2C3E50;
+
+$white: #fff;
+$black: #555;
+$grey: #eee;
+$lightGrey: lighten($grey, 5%);
+
+
+
+/* --- Colours --- */
+$shadow: 0px 3px 6px rgba(0,0,0,0.16);
+
+/* --------------------------------*/
+
+/* --- Fonts --- */
+
+$primaryFont: 'Rubik', sans-serif;
+$secondaryFont: 'Open Sans';
+
+/* --- Fonts --- */
+
+/* --------------------------------*/
+
+
+/* --- Media Querys --- */
+
+$largeMobile: "(min-width: 425px)";
+$small-tablet: "(min-width: 600px)";
+$tablet: "(min-width: 768px)";
+$laptop: "(min-width: 1024px)";
+$desktop: "(min-width: 1420px)";
+
+// example: @media #{$small-tablet} { }
+
+/* --- Media Querys --- */

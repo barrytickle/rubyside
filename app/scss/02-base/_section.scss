@@ -1,0 +1,104 @@
+section{
+  position: relative;
+  h2{
+    font-weight:100;
+    font-size:42px;
+  }
+}
+
+.section--full_height{
+  height:100vh;
+  padding:20px;
+  @media #{$laptop}{
+    height:100vh;
+  }
+}
+
+.section--block_half{
+  width:100vw;
+  padding-top:30px;
+  @media #{$laptop}{
+    width:50vw;
+  }
+}
+
+.section--block_primary{
+  background-color:$primaryColor;
+  color:$white;
+}
+
+.section--block_seconday{
+  background-color:$secondaryColor;
+  color:$white;
+}
+
+.ruby-logo--container{
+  height:80px;
+  box-shadow: $shadow;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:2;
+  background:$white;
+  padding:0 20px;
+
+  @include display(flex);
+  @include justify-content(space-between);
+  @include flex-direction(row);
+  @include align-items(center);
+
+
+  @media #{$laptop}{
+    position: relative;
+    height:100vh;
+    width:50vw;
+    @include flex-direction(column);
+    padding-top:30px;
+
+
+    #hamburger{
+      display:none;
+    }
+
+  }
+
+
+  .mouse-scroll{
+    display:none;
+    @media #{$laptop}{
+      display:block;
+      position: absolute;
+      bottom:30px;
+      left:50%;
+      transform: translateX(-50%);
+    }
+  }
+  .logo--group{
+    img{
+      height:50px;
+      @media #{$laptop}{
+        height:200px;
+      }
+    }
+
+    span{
+      display:none;
+      @media #{$laptop}{
+        display:block;
+        position: absolute;
+        bottom:30px;
+        color:$primaryColor;
+        width:70%;
+      }
+    }
+    @media #{$laptop}{
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform:translate(-50%, -50%);
+      @include display(flex);
+      @include flex-direction(column);
+    }
+  }
+}

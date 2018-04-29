@@ -1,0 +1,24 @@
+/* Flex center is designed to put an element straight in the middle of the section, use on the parent element for the correct effect */
+.flex--center{
+  @include display(flex);
+  @include justify-content(center);
+  @include align-items(center);
+}
+
+.flex--split_column{
+  @include flex-direction(column);
+  @include justify-content(space-between);
+}
+
+.flex--group{
+  @include display(flex);
+  @include flex-direction(column-reverse);
+  @media #{$laptop}{
+    @include flex-direction(row);
+  }
+}
+
+.flex--space_between{
+  @include display(flex);
+  @include justify-content(space-between);
+}

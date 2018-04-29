@@ -1,0 +1,40 @@
+.team-block{
+  @include display(flex);
+  @include justify-content(space-between);
+  @include flex-direction(column);
+
+  @media #{$laptop}{
+    @include flex-direction(row);
+  }
+
+  .team-member{
+    width:100%;
+    @include display(flex);
+    @include flex-direction(column);
+    margin-bottom:30px;
+    @media #{$laptop}{
+      width:30%;
+    }
+
+  }
+
+  .team-description{
+    background:$white;
+    box-shadow: $shadow;
+    padding:20px;
+    h3{
+      font-weight:400;
+    }
+    h3,a{
+      color:$primaryColor;
+      text-decoration: none;
+      margin:0;
+    }
+    p{
+      color:$black;
+      margin:0;
+    }
+  }
+
+
+}
